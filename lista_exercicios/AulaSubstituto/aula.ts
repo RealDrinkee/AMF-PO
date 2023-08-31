@@ -13,3 +13,23 @@ function getNomeSobrenome(animal: AnimalBackend) {
     }
 }
 
+class Vaca extends Animal {
+    constructor(nome: string) {
+        super(nome);
+    }
+}
+
+function recebeAnimal(animal: Animal) {
+    if(animal instanceof Vaca) {
+        print("Muuuuu")
+}
+
+class Animal implements AnimalBackend {
+    constructor(public nome: string) {
+        this.nome = nome;
+    }
+}
+
+const animal2 = new Animal('Cachorro');
+
+console.log(getNomeSobrenome(animal2));
