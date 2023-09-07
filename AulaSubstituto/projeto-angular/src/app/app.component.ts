@@ -6,10 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'projeto-angular';
+  selectedHero: string = '';
 
-  ClickButton() {
-    this.title = 'O título foi alterado';
-  }
+ selectHero(hero: string) {
+   console.log(hero);
+   this.selectedHero = hero;
+ }
 }
 
