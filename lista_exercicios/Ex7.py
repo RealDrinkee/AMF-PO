@@ -5,6 +5,16 @@
 # Fome e Saúde, ou seja, um campo calculado, então não devemos criar um atributo para
 # armazenar esta informação por que ela pode ser calculada a qualquer momento.
 
+# class verificarFome():
+#
+#     def __init__(self):
+#         self.atributoExterno = Tamagotchi()
+#
+#
+#     def obter__Atributo(self):
+#         print(self.atributoExterno.fome)
+#         return self.atributoExterno.fome
+
 class Tamagotchi():
 
     def __init__(self):
@@ -97,6 +107,12 @@ class Tamagotchi():
         return self.idade
 
     def brincar(self):
+        if self.fome <= 5:
+            print("Seu Tamagotchi está com fome, alimente-o antes de brincar")
+            self.setFome()
+        else:
+            self.Verificar
+            pass
         opcao = 0
         while opcao != 3:
             print("1 - Jogar bola +2 \n2 - Passear + 5\n3 - Sair")
@@ -105,10 +121,12 @@ class Tamagotchi():
                 if opcao == 1:
                     print("Você jogou bola com o seu Tamagotchi")
                     self.humor += 2
+                    self.fome -= 4
                     print(f"Você aumentou o humor do seu Tamagotchi em +2: {self.humor}")
                 elif opcao == 2:
                     print("Você passeou com o seu Tamagotchi")
                     self.humor += 5
+                    self.fome -= 10
                     print(f"Você aumentou o humor do seu Tamagotchi em +5: {self.humor}")
                 else:
                     print("Opção inválida")
@@ -159,3 +177,5 @@ class Tamagotchi():
 
 game = Tamagotchi()
 game.main()
+
+
