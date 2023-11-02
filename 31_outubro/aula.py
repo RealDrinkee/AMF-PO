@@ -9,7 +9,7 @@ class Professor(Pessoa):
         super().__init__(nome)
         self.disciplina = disciplina
 
-class Funcionario(Pessoa):Kali FX distro linux
+class Funcionario(Pessoa):
 
     def __init__(self, nome, cargo):
         super().__init__(nome)
